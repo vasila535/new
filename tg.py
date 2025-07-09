@@ -17,3 +17,9 @@ async def starts(message:types.Message):
                          f'Iltimos ism kiriting')
     print(1,user_data)
     await ask_phone(message)
+
+async def ask_phone(message:types.Message):
+    user_id = message.from_user.id
+    name = message.text
+    user_data[user_id]['name'] = name
+    print(2,user_data)
